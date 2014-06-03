@@ -1,0 +1,26 @@
+HKCR
+{
+	CodaComponent.Character.1 = s 'Character Class'
+	{
+		CLSID = s '{3E4737E0-5CA8-409D-B01D-5655BA72BC63}'
+	}
+	CodaComponent.Character = s 'Character Class'
+	{
+		CLSID = s '{3E4737E0-5CA8-409D-B01D-5655BA72BC63}'
+		CurVer = s 'CodaComponent.Character.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {3E4737E0-5CA8-409D-B01D-5655BA72BC63} = s 'Character Class'
+		{
+			ProgID = s 'CodaComponent.Character.1'
+			VersionIndependentProgID = s 'CodaComponent.Character'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{100EDB61-254C-4040-BA5B-B5B1954C78EE}'
+		}
+	}
+}

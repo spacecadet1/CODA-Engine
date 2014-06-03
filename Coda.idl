@@ -1,0 +1,138 @@
+// Coda.idl : IDL source for Coda.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Coda.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(4BC090F3-7A1D-4392-9665-B76763577611),
+		dual,
+		helpstring("ITrekCharacter Interface"),
+		pointer_default(unique)
+	]
+	interface ITrekCharacter : IDispatch
+	{
+		
+		[id(1), helpstring("method Untrained_Add")] HRESULT Untrained_Add();
+		[propput, id(2), helpstring("property Language")] HRESULT Language([in] BSTR newVal);
+		[propget, id(3), helpstring("property AttributeModifier")] HRESULT AttributeModifier(int number, [out, retval] int *pVal);
+		[id(4), helpstring("method ShowInfo")] HRESULT ShowInfo(BSTR caption);
+		[id(5), helpstring("method ShowMessage")] HRESULT ShowMessage(BSTR caption);
+		[propget, id(6), helpstring("property IsFavorite")] HRESULT IsFavorite(BSTR name, [out, retval] BOOL *pVal);
+		[propget, id(7), helpstring("property IsProfessionalSkill")] HRESULT IsProfessionalSkill(BSTR skill, [out, retval] BOOL *pVal);
+		[id(8), helpstring("method DepartmentHead_Add")] HRESULT DepartmentHead_Add(int choice, int index);
+		[propget, id(9), helpstring("property Reactions")] HRESULT Reactions(int index, [out, retval] int *pVal);
+		[propget, id(10), helpstring("property Defense")] HRESULT Defense([out, retval] int *pVal);
+		[propput, id(10), helpstring("property Defense")] HRESULT Defense([in] int newVal);
+		[id(11), helpstring("method Traits_RemoveAll")] HRESULT Traits_RemoveAll();
+		[propget, id(12), helpstring("property UserSpeciality")] HRESULT UserSpeciality(BSTR skill, [out, retval] BSTR *pVal);
+		[id(13), helpstring("method ProfPackage_Entry")] HRESULT ProfPackage_Entry(BSTR skill, BSTR speciality, int level);
+		[propget, id(14), helpstring("property ProfPackagesCount")] HRESULT ProfPackagesCount([out, retval] int *pVal);
+		[propget, id(15), helpstring("property ProfPackages")] HRESULT ProfPackages(int index, [out, retval] BSTR *pVal);
+		[id(16), helpstring("method LoadProfSkills")] HRESULT LoadProfSkills();
+		[propget, id(17), helpstring("property ProfEdges")] HRESULT ProfEdges(int index, [out, retval] BSTR *pVal);
+		[propget, id(18), helpstring("property ProfEdgesCount")] HRESULT ProfEdgesCount([out, retval] int *pVal);
+		[id(19), helpstring("method Background_Entry")] HRESULT Background_Entry(BSTR skill, int level);
+		[id(20), helpstring("method LoadEliteTier")] HRESULT LoadEliteTier();
+		[id(21), helpstring("method Dice_Rolls")] HRESULT Dice_Rolls();
+		[propget, id(22), helpstring("property Dice")] HRESULT Dice(int index, [out, retval] int *pVal);
+		[propget, id(23), helpstring("property Fave2Attribute")] HRESULT Fave2Attribute([out, retval] BSTR *pVal);
+		[propput, id(23), helpstring("property Fave2Attribute")] HRESULT Fave2Attribute([in] BSTR newVal);
+		[propget, id(24), helpstring("property Fave1Attribute")] HRESULT Fave1Attribute([out, retval] BSTR *pVal);
+		[propput, id(24), helpstring("property Fave1Attribute")] HRESULT Fave1Attribute([in] BSTR newVal);
+		[propget, id(25), helpstring("property FaveReaction")] HRESULT FaveReaction([out, retval] BSTR *pVal);
+		[propput, id(25), helpstring("property FaveReaction")] HRESULT FaveReaction([in] BSTR newVal);
+		[id(26), helpstring("method Elite_Upgrade")] HRESULT Elite_Upgrade();
+		[propget, id(27), helpstring("property TierList")] HRESULT TierList(int index, [out, retval] BSTR *pVal);
+		[propget, id(28), helpstring("property TierList_Count")] HRESULT TierList_Count([out, retval] int *pVal);
+		[id(29), helpstring("method LoadTier")] HRESULT LoadTier();
+		[id(30), helpstring("method Rank_Assign")] HRESULT Rank_Assign();
+		[id(31), helpstring("method Age_Effects")] HRESULT Age_Effects();
+		[propget, id(32), helpstring("property Renown")] HRESULT Renown([out, retval] int *pVal);
+		[propput, id(32), helpstring("property Renown")] HRESULT Renown([in] int newVal);
+		[propget, id(33), helpstring("property Courage")] HRESULT Courage([out, retval] int *pVal);
+		[propput, id(33), helpstring("property Courage")] HRESULT Courage([in] int newVal);
+		[propget, id(34), helpstring("property Health")] HRESULT Health([out, retval] int *pVal);
+		[propput, id(34), helpstring("property Health")] HRESULT Health([in] int newVal);
+		[propget, id(35), helpstring("property Species")] HRESULT Species([out, retval] BSTR *pVal);
+		[propput, id(35), helpstring("property Species")] HRESULT Species([in] BSTR newVal);
+		[propget, id(36), helpstring("property Elite")] HRESULT Elite([out, retval] BSTR *pVal);
+		[propput, id(36), helpstring("property Elite")] HRESULT Elite([in] BSTR newVal);
+		[propget, id(37), helpstring("property Profession")] HRESULT Profession([out, retval] BSTR *pVal);
+		[propput, id(37), helpstring("property Profession")] HRESULT Profession([in] BSTR newVal);
+		[propget, id(38), helpstring("property Age")] HRESULT Age([out, retval] BSTR *pVal);
+		[propput, id(38), helpstring("property Age")] HRESULT Age([in] BSTR newVal);
+		[propget, id(39), helpstring("property Rank")] HRESULT Rank([out, retval] int *pVal);
+		[propput, id(39), helpstring("property Rank")] HRESULT Rank([in] int newVal);
+		[propget, id(40), helpstring("property Gender")] HRESULT Gender([out, retval] BSTR *pVal);
+		[propput, id(40), helpstring("property Gender")] HRESULT Gender([in] BSTR newVal);
+		[propget, id(41), helpstring("property AutoCount")] HRESULT AutoCount([out, retval] int *pVal);
+		[propget, id(42), helpstring("property AutoLevel")] HRESULT AutoLevel(int index, [out, retval] int *pVal);
+		[propget, id(43), helpstring("property AutoSpeciality")] HRESULT AutoSpeciality(int index, [out, retval] BSTR *pVal);
+		[propget, id(44), helpstring("property AutoSubSkill")] HRESULT AutoSubSkill(int index, [out, retval] BSTR *pVal);
+		[propget, id(45), helpstring("property AutoSkill")] HRESULT AutoSkill(int index, [out, retval] BSTR *pVal);
+		[propget, id(46), helpstring("property ProfessionalCount")] HRESULT ProfessionalCount([out, retval] int *pVal);
+		[propget, id(47), helpstring("property ProfessionalSpeciality")] HRESULT ProfessionalSpeciality(int index, BSTR skill, [out, retval] BSTR *pVal);
+		[propget, id(48), helpstring("property ProfessionalSubSkill")] HRESULT ProfessionalSubSkill(int index, [out, retval] BSTR *pVal);
+		[propget, id(49), helpstring("property ProfessionalSkill")] HRESULT ProfessionalSkill(int index, [out, retval] BSTR *pVal);
+		[id(50), helpstring("method LoadPackage")] HRESULT LoadPackage(BSTR newVal);
+		[id(51), helpstring("method LoadChoices")] HRESULT LoadChoices();
+		[propget, id(52), helpstring("property PickFlawItem")] HRESULT PickFlawItem(int index, [out, retval] BSTR *pVal);
+		[propget, id(53), helpstring("property PickEdgeItem")] HRESULT PickEdgeItem(int index, [out, retval] BSTR *pVal);
+		[propget, id(54), helpstring("property PickThreeItem")] HRESULT PickThreeItem(int index, [out, retval] BSTR *pVal);
+		[propget, id(55), helpstring("property PickOneItem")] HRESULT PickOneItem(int index, [out, retval] BSTR *pVal);
+		[propget, id(56), helpstring("property PickFlawCount")] HRESULT PickFlawCount([out, retval] int *pVal);
+		[propget, id(57), helpstring("property PickEdgeCount")] HRESULT PickEdgeCount([out, retval] int *pVal);
+		[propget, id(58), helpstring("property PickThreeCount")] HRESULT PickThreeCount([out, retval] int *pVal);
+		[propget, id(59), helpstring("property PickOneCount")] HRESULT PickOneCount([out, retval] int *pVal);
+		[propput, id(60), helpstring("property Background")] HRESULT Background([in] BSTR newVal);
+		[id(61), helpstring("method RecordReactionModifiers")] HRESULT RecordReactionModifiers();
+		[id(62), helpstring("method RecordSpeciesModifiers")] HRESULT RecordSpeciesModifiers();
+		[propget, id(63), helpstring("property Attributes")] HRESULT Attributes(int index, [out, retval] int *pVal);
+		[propput, id(63), helpstring("property Attributes")] HRESULT Attributes(int index, [in] int newVal);
+		[id(64), helpstring("method Skill_ReplaceLevel")] HRESULT Skill_ReplaceLevel(BSTR name, BSTR specific, int level);
+		[propget, id(65), helpstring("property Skill_Exist")] HRESULT Skill_Exist(BSTR name, BSTR specific, [out, retval] BOOL *pVal);
+		[id(66), helpstring("method Skill_RemoveAll")] HRESULT Skill_RemoveAll();
+		[id(67), helpstring("method Skill_Remove")] HRESULT Skill_Remove(BSTR name, BSTR specific);
+		[id(68), helpstring("method Skill_Add")] HRESULT Skill_Add(BSTR name, BSTR specific, int level);
+		[id(69), helpstring("method Skill_Modify")] HRESULT Skill_Modify(BSTR name, BSTR specific, int level);
+		[propget, id(70), helpstring("property Skill_Level")] HRESULT Skill_Level(int index, [out, retval] int *pVal);
+		[propget, id(71), helpstring("property Skill_Count")] HRESULT Skill_Count([out, retval] int *pVal);
+		[propget, id(72), helpstring("property Skill_Name")] HRESULT Skill_Name(int index, [out, retval] BSTR *pVal);
+		[propget, id(73), helpstring("property Skill_Specific")] HRESULT Skill_Specific(int index, [out, retval] BSTR *pVal);
+		[id(74), helpstring("method Flaw_Add")] HRESULT Flaw_Add(BSTR name);
+		[id(75), helpstring("method Edge_Add")] HRESULT Edge_Add(BSTR name);
+		[propget, id(76), helpstring("property Flaw_Exist")] HRESULT Flaw_Exist(BSTR name, [out, retval] BOOL *pVal);
+		[propget, id(77), helpstring("property Edge_Exist")] HRESULT Edge_Exist(BSTR name, [out, retval] BOOL *pVal);
+		[propget, id(78), helpstring("property Flaw_Count")] HRESULT Flaw_Count([out, retval] int *pVal);
+		[propget, id(79), helpstring("property Edge_Count")] HRESULT Edge_Count([out, retval] int *pVal);
+		[propget, id(80), helpstring("property Flaw")] HRESULT Flaw(int index, [out, retval] BSTR *pVal);
+		[propget, id(81), helpstring("property Edge")] HRESULT Edge(int index, [out, retval] BSTR *pVal);
+		[id(82), helpstring("method SetSpecies")] HRESULT SetSpecies();
+		[propget, id(83), helpstring("property Species_Count")] HRESULT Species_Count([out, retval] int *pVal);
+		[propget, id(84), helpstring("property Species_List")] HRESULT Species_List(int index, [out, retval] BSTR *pVal);
+				
+	};
+
+[
+	uuid(100EDB61-254C-4040-BA5B-B5B1954C78EE),
+	version(1.0),
+	helpstring("Coda 1.0 Type Library")
+]
+library CODALib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(3E4737E0-5CA8-409D-B01D-5655BA72BC63),
+		helpstring("Character Class")
+	]
+	coclass Character
+	{
+		[default] interface ITrekCharacter;
+	};
+};
